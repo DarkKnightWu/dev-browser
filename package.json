@@ -2,13 +2,6 @@
   "name": "browser-skill",
   "type": "module",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "dev-browser/*"
-  ],
-  "overrides": {
-    "dev-browser": "workspace:dev-browser"
-  },
   "devDependencies": {
     "@types/bun": "latest",
     "husky": "^9.1.7",
