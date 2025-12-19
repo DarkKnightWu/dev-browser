@@ -134,12 +134,14 @@ Add to your `~/.claude/settings.json` (user-level, applies to all projects):
 ```json
 {
   "permissions": {
-    "allow": ["Bash(bun x tsx:*)"]
+    "allow": ["Skill(dev-browser:dev-browser)", "Bash(bun x tsx:*)"],
+    "deny": [],
+    "ask": []
   }
 }
 ```
 
-This allowlists the `bun x tsx` command that runs the browser automation scripts, regardless of which directory the skill is installed in.
+This allowlists the dev-browser skill and the `bun x tsx` command that runs the browser automation scripts, regardless of which directory the skill is installed in.
 
 For project-level settings, add to `.claude/settings.json` in your project root.
 
