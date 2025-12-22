@@ -46,6 +46,21 @@ rm -rf /tmp/dev-browser-skill
 cd ~/.claude/skills/dev-browser && npm install && npm run start-server
 ```
 
+### Chrome Extension (Optional)
+
+The Chrome extension allows Dev Browser to control your existing Chrome browser instead of launching a separate Chromium instance. This gives you access to your logged-in sessions, bookmarks, and extensions.
+
+**Installation:**
+
+1. Download `extension.zip` from the [latest release](https://github.com/sawyerhood/dev-browser/releases/latest)
+2. Unzip the file to a permanent location (e.g., `~/.dev-browser-extension`)
+3. Open Chrome and go to `chrome://extensions`
+4. Enable "Developer mode" (toggle in top right)
+5. Click "Load unpacked" and select the unzipped extension folder
+6. Click the extension icon in Chrome toolbar and toggle it to "Active"
+
+When active, the extension connects to Dev Browser's server and allows automation of your current Chrome tabs. Tell your agent to "use the extension" or "use my existing Chrome" to use it instead of the built-in browser.
+
 ## Permissions
 
 To skip permission prompts, add to `~/.claude/settings.json`:
