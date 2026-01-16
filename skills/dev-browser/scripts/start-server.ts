@@ -75,11 +75,11 @@ try {
 // Check if server is already running
 console.log("Checking for existing servers...");
 try {
-  const res = await fetch("http://localhost:9222", {
+  const res = await fetch("http://localhost:9333", {
     signal: AbortSignal.timeout(1000),
   });
   if (res.ok) {
-    console.log("Server already running on port 9222");
+    console.log("Server already running on port 9333");
     process.exit(0);
   }
 } catch {
@@ -101,7 +101,7 @@ try {
 console.log("Starting dev browser server...");
 const headless = process.env.HEADLESS === "true";
 const server = await serve({
-  port: 9222,
+  port: 9333,
   headless,
   profileDir,
 });

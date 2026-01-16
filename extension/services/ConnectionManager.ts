@@ -5,7 +5,7 @@
 import type { Logger } from "../utils/logger";
 import type { ExtensionCommandMessage, ExtensionResponseMessage } from "../utils/types";
 
-const RELAY_URL = "ws://localhost:9222/extension";
+const RELAY_URL = "ws://localhost:9333/extension";
 const RECONNECT_INTERVAL = 3000;
 
 export interface ConnectionManagerDeps {
@@ -46,7 +46,7 @@ export class ConnectionManager {
 
     // Verify server is actually reachable
     try {
-      const response = await fetch("http://localhost:9222", {
+      const response = await fetch("http://localhost:9333", {
         method: "HEAD",
         signal: AbortSignal.timeout(1000),
       });
@@ -138,7 +138,7 @@ export class ConnectionManager {
 
     // Check if server is available
     try {
-      await fetch("http://localhost:9222", { method: "HEAD" });
+      await fetch("http://localhost:9333", { method: "HEAD" });
     } catch {
       return;
     }

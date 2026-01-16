@@ -52,7 +52,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number, message: string): Promi
 }
 
 export async function serve(options: ServeOptions = {}): Promise<DevBrowserServer> {
-  const port = options.port ?? 9222;
+  const port = options.port ?? 9333;
   const headless = options.headless ?? false;
   const cdpPort = options.cdpPort ?? 9223;
   const profileDir = options.profileDir;

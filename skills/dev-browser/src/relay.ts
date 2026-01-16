@@ -103,7 +103,7 @@ interface CDPEvent {
 // ============================================================================
 
 export async function serveRelay(options: RelayOptions = {}): Promise<RelayServer> {
-  const port = options.port ?? 9222;
+  const port = options.port ?? 9333;
   const host = options.host ?? "127.0.0.1";
 
   // State
